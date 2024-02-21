@@ -52,7 +52,8 @@
                 <h1 class="mb-5 text-5xl font-bold">End-to-End Travel with <br> <br><span class="text-[#1DD100]"> Bangladesh Paribahan</span></h1>
                   
                 <p class="mb-5">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
-                <button class="btn bg-[#1DD100] border-none w-2/12">Get Started</button>
+                <a class="" href="#main-section"><button class="btn bg-[#1DD100] border-none w-44 ">Get Start</button></a>
+                </button>
               </div>
             </div>
           </div>
@@ -89,7 +90,7 @@
         </section>
         <!-- ------------------main section--------- -->
        
-        <section class="">
+        <section id="main-section" class="">
           <div class="bg-[#F7F8F8] border-t-4 border-green-700 rounded-2xl mt-16
           p-20 ">
            <div class="flex flex-col gap-16">
@@ -138,35 +139,37 @@
          <div class="flex justify-between items-center border-dotted border-b-2 p-3">
           <div class="flex items-center">
             <img src="./images/seat-gray.png" alt="">
-            <p>Available</p>
+            <p>Available <span id="available-sit">40</span></p>
           </div>
          <div class="flex items-center"> <img src="./images/seat-green-filled.png" alt="">
-          <p>Selected</p></div>
+          <p>Selected <span id="selected-seat">0</span></p></div>
          </div>
          </div>
-         <div class="seat flex flex-col gap-5">
+         <div  class=" flex flex-col gap-5">
           <div class="flex justify-end">
-            <button class="btn"><img class="w-5" src="./images/158-1582985_steering-wheel-car-navigation-driving-car-steering-wheel.png" alt=""></button>
+            <button  class="btn "><img class="w-5" src="./images/158-1582985_steering-wheel-car-navigation-driving-car-steering-wheel.png" alt=""></button>
            </div>
-           <div class=" flex justify-between items-center">
-            <div class=" flex gap-10  items-center"><p>A</p>
-              <button class="btn w-24">A1</button>
-              <button class="btn w-24">A2</button>
-            </div>
-            <div class="flex gap-10">
-              <button class="btn w-24">A3</button>
-              <button class="btn w-24">A4</button>
-            </div>
-           </div>
-           <div class=" flex justify-between items-center">
-            <div class=" flex gap-10  items-center"><p>B</p>
-              <button class="btn w-24">B1</button>
-              <button class="btn w-24">B2</button>
-            </div>
-            <div class="flex gap-10">
-              <button class="btn w-24">B3</button>
-              <button class="btn w-24">B4</button>
-            </div>
+           <div id="ticket-no"  class="flex flex-col gap-5">
+            <div class=" flex justify-between items-center">
+              <div class=" flex gap-10  items-center"><p>A</p>
+                <button id="A1" class=" seat btn w-24">A1</button>
+                <button id="A2" class=" seat btn w-24">A2</button>
+              </div>
+              <div class="flex gap-10">
+                <button id="A3" class=" seat btn w-24">A3</button>
+                <button id="A4" class=" seat btn w-24">A4</button>
+              </div>
+             </div>
+             <div class=" flex justify-between items-center">
+              <div class=" flex gap-10  items-center"><p>B</p>
+                <button id="B1" class=" seat btn w-24">B1</button>
+                <button id="B2" class=" seat btn w-24">B2</button>
+              </div>
+              <div class="flex gap-10">
+                <button id="B3" class=" seat btn w-24">B3</button>
+                <button id="B4" class=" seat btn w-24">B4</button>
+              </div>
+             </div>
            </div>
          </div>
             </div>
@@ -174,31 +177,35 @@
             <div class="flex flex-col gap-5 w-4/12 bg-[#F7F8F8] p-5 rounded-xl mt-1">
               <div class=""><h3 class="raleway-700 text-[24px]"> Select Your Seat</h3></div>
               <div class="border-b-4">
-                <div class="flex justify-between border-dotted border-b-2">
+                <div  class="flex justify-between border-dotted border-b-2">
                   <p>Seat</p>
                   <p>Class</p>
                   <p>Fare</p>
                 </div>
-                <div class="flex justify-between items-center">
+                <div id="ticket-1" class="flex justify-between items-center hidden">
                   <p></p>
                   <p>economy</p>
                   <p>550</p>
                 </div>
-                <div class="flex justify-between items-center">
+                <div id="ticket-2" class="flex justify-between items-center hidden">
                   <p></p>
                   <p>economy</p>
                   <p>550</p>
                 </div>
-                <div class="flex justify-between items-center">
+                <div id="ticket-3" class="flex justify-between items-cente hidden">
                   <p></p>
                   <p>economy</p>
                   <p>550</p>
                 </div>
-                
+                <div id="ticket-4" class="flex justify-between items-cente hidden">
+                  <p></p>
+                  <p>economy</p>
+                  <p>550</p>
+                </div>
               </div>
               <div class="flex justify-between">
                 <h3>Total Price</h3>
-                <h3>BDT <span></span></h3>
+                <h3>BDT <span id="total-amount">0</span></h3>
               </div>
               <div class="flex justify-center items-center"><div class="join">
                 <input class="input input-bordered join-item" placeholder="Have Any Cupon"/>
@@ -224,5 +231,8 @@
           <button class="btn bg-[#27AE60] text-white w-44">Continue</button>
       </div>
     </section>
+    <!-- javascript link -->
+    <script src="./function.js"></script>
+    <script src="./function-hub.js"></script>
 </body>
 </html>
