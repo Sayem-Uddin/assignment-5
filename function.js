@@ -7,6 +7,8 @@ const allseats = document.querySelectorAll('.seat')
  const totalAmountElement = document.getElementById('total-amount')
  const totalAvailableSit = document.getElementById('available-sit')
  const totalSelectedSeat = document.getElementById('selected-seat')
+ const discount = document.getElementById('cupon')
+ const applyButton = document.getElementById('apply-btn')
 for (let seats of allseats){
     seats.addEventListener('click',function(event){
         console.log(seats);
@@ -38,6 +40,33 @@ for (let seats of allseats){
         
 })
 }
+discount.addEventListener("keyup",function cuponeCode (event){
+    const text = event.target.value;
+    const allpyButton = document.getElementById('apply-btn');
+    if( text === 'NEW15'){
+        discount15(totalAmount)
+        applyButton.removeAttribute('disabled')
 
+    }
+    else{
+        if( text === 'Couple 20'){
+            discount15(totalAmount)
+        applyButton.removeAttribute('disabled')
+        }
+        else{
+
+            applyButton.setAttribute('disabled',true)
+        }
+    }
+})
+
+function nextPage (){
+    hideElementById('main-page')
+    showElementById('complete')
+}
+function MainPage (){
+    showElementById('main-page')
+    hideElementById('complete')
+}
 console.log(totalAmountElement.textContent)
-// cupon section
+

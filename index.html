@@ -10,7 +10,7 @@
 
 </head>
 <body class="mx-2 lg:mx-8"> 
-    <main class="">
+    <main id="main-page" class="">
         <!----------------------- navigationbar------------- -->
     <div class="navbar bg-base-100">
       <div class="navbar-start">
@@ -69,7 +69,7 @@
           <p>use by January 2024</p></div>
           <div class="w-2/12"><img src="./images/cupon-devider.png" alt=""></div>
           <div class="w-4/12 pt-[74px]">
-            <h1 class="inter-900 text-3xl">NEW15%</h1>
+            <h1 class="inter-900 text-3xl">NEW15</h1>
             <p class="inter-600 text-lg">Cupon Code</p>
           </div>
               
@@ -170,6 +170,73 @@
                 <button id="B4" class=" seat btn w-24">B4</button>
               </div>
              </div>
+             <div class=" flex justify-between items-center">
+              <div class=" flex gap-10  items-center"><p>C</p>
+                <button id="C1" class=" seat btn w-24">C1</button>
+                <button id="C2" class=" seat btn w-24">C2</button>
+              </div>
+              <div class="flex gap-10">
+                <button id="C3" class=" seat btn w-24">C3</button>
+                <button id="C4" class=" seat btn w-24">C4</button>
+              </div>
+             </div>
+             <div class=" flex justify-between items-center">
+              <div class=" flex gap-10  items-center"><p>D</p>
+                <button id="D1" class=" seat btn w-24">D1</button>
+                <button id="D2" class=" seat btn w-24">D2</button>
+              </div>
+              <div class="flex gap-10">
+                <button id="D3" class=" seat btn w-24">D3</button>
+                <button id="D4" class=" seat btn w-24">D4</button>
+              </div>
+             </div>
+             <div class=" flex justify-between items-center">
+              <div class=" flex gap-10  items-center"><p>E</p>
+                <button id="E1" class=" seat btn w-24">E1</button>
+                <button id="E2" class=" seat btn w-24">E2</button>
+              </div>
+              <div class="flex gap-10">
+                <button id="E3" class=" seat btn w-24">E3</button>
+                <button id="E4" class=" seat btn w-24">E4</button>
+              </div>
+             </div>
+             <div class=" flex justify-between items-center">
+              <div class=" flex gap-10  items-center"><p>F</p>
+                <button id="F1" class=" seat btn w-24">F1</button>
+                <button id="F2" class=" seat btn w-24">F2</button>
+              </div>
+              <div class="flex gap-10">
+                <button id="F3" class=" seat btn w-24">F3</button>
+                <button id="F4" class=" seat btn w-24">F4</button>
+              </div>
+             </div><div class=" flex justify-between items-center">
+              <div class=" flex gap-10  items-center"><p>G</p>
+                <button id="G1" class=" seat btn w-24">G1</button>
+                <button id="G2" class=" seat btn w-24">G2</button>
+              </div>
+              <div class="flex gap-10">
+                <button id="G3" class=" seat btn w-24">G3</button>
+                <button id="G4" class=" seat btn w-24">G4</button>
+              </div>
+             </div><div class=" flex justify-between items-center">
+              <div class=" flex gap-10  items-center"><p>H</p>
+                <button id="H1" class=" seat btn w-24">H1</button>
+                <button id="H2" class=" seat btn w-24">H2</button>
+              </div>
+              <div class="flex gap-10">
+                <button id="H3" class=" seat btn w-24">H3</button>
+                <button id="H4" class=" seat btn w-24">H4</button>
+              </div>
+             </div><div class=" flex justify-between items-center">
+              <div class=" flex gap-10  items-center"><p>I</p>
+                <button id="I1" class=" seat btn w-24">I1</button>
+                <button id="I2" class=" seat btn w-24">I2</button>
+              </div>
+              <div class="flex gap-10">
+                <button id="I3" class=" seat btn w-24">I3</button>
+                <button id="I4" class=" seat btn w-24">I4</button>
+              </div>
+             </div>
            </div>
          </div>
             </div>
@@ -208,16 +275,17 @@
                 <h3>BDT <span id="total-amount">0</span></h3>
               </div>
               <div class="flex justify-center items-center"><div class="join">
-                <input class="input input-bordered join-item" placeholder="Have Any Cupon"/>
-                <button class="btn join-item bg-[#1dd100] ">Apply</button>
+                <input id="cupon" class="input input-bordered join-item" placeholder="Have Any Cupon"/>
+                <button onclick="cuponeCode(event)" disabled id="apply-btn" class="btn join-item bg-[#1dd100] ">Apply</button>
               </div></div>
+              <button onclick="nextPage ()" class="btn join-item bg-[#1dd100] ">Next</button>
             </div>
            </div>
           </div>
         </section>
     </main>
     <!----------------- after click section--------------- -->
-    <section class=" hidden bg-[#F7F8F8] min-h-full p-56">
+    <section id="complete" class=" hidden bg-[#F7F8F8] min-h-full p-56">
       <div class=" flex flex-col justify-center items-center bg-white p-10 gap-3 rounded-xl">
         <img src="./images/success.png" alt="">
         <h3 class="raleway-700 text-2xl text-[#27AE60]">Success</h3>
@@ -228,7 +296,7 @@
             </h4>
             
        
-          <button class="btn bg-[#27AE60] text-white w-44">Continue</button>
+          <button onclick="MainPage ()" class="btn bg-[#27AE60] text-white w-44">Continue</button>
       </div>
     </section>
     <!-- javascript link -->
